@@ -66,13 +66,22 @@ students.push(sheonna = Students.new("Sheonna", [100, 100, 85, 60, 100]))
 # 	puts students[person].first_name == "Alex"
 # end
 
-def linear_seach(array, name)
+def linear_search(array, name)
 	@students = array
-	students.each do |x|
-		person = students.index(x)
-		students[person].first_name == name
-	end
+
+	index = @students.index { |student| student.first_name == name }
+	return index
+	
+	# @students.each do |x|
+	# 	person = @students.index(x)
+	# 	# @students[person].first_name == name
+	# 	# puts @students.index(person)
+	# 	p "SUPPPPP",person
+	# 	if @students[person].first_name == name
+	# 		puts @students.index(x)
+	# 	end
+	# end
 end
 
-puts linear_seach(students, "Alex")
+p linear_search(students, "Nobody")
 
