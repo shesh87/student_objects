@@ -60,44 +60,19 @@ students.push(sheonna = Students.new("Sheonna", [100, 100, 85, 60, 100]))
 # puts linear_search(students, "Alex") == 0
 # puts linear_search(students, "NOT A STUDENT") == -1
 
-# puts students[?].first_name
-# puts students.index(teri)
 
-
-# puts students.test
-
-# a.index { |x| x == "b" }  #=> 1
-
-# def linear_search(student)
-# 	name = student
-# 	students.index do |student|
-# 		student[0] == name
-# 	end 
-# end
-# puts students[0].first_name
-# puts linear_search(alex)
-
-# def test(student)
-# 	students.index(alex)
+# students.each do |x|
+# 	person = students.index(x)
+# 	puts students[person].first_name == "Alex"
 # end
 
-# puts alex.first_name
-
-# alex.each do |x|
-# 	self.first_name == "Alex"
-# end
-# puts students.length
-
-def linear_search(name)
-	# students.each do |x|
-	# 	students[x].first_name == name
-	# end
-	students.length
-		# students[x].first_name == name
+def linear_seach(array, name)
+	@students = array
+	students.each do |x|
+		person = students.index(x)
+		students[person].first_name == name
+	end
 end
 
-puts linear_search("Alex")
-
-
-
+puts linear_seach(students, "Alex")
 
