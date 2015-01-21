@@ -49,6 +49,20 @@ students.push(jasmine = Students.new("Jasmine", [100, 90, 80, 75, 95]))
 students.push(sheonna = Students.new("Sheonna", [100, 100, 85, 60, 100]))
 
 
+def linear_search(array, name)
+	@students = array
+	
+	index = @students.index do |student|
+		student.first_name == name
+	end
+	if index == nil
+		return -1
+	else
+		return index
+	end
+end
+
+
 # puts students[0].first_name
 # puts students[0].scores.length
 # puts students[0].scores[0] == students[0].scores[4]
@@ -57,31 +71,12 @@ students.push(sheonna = Students.new("Sheonna", [100, 100, 85, 60, 100]))
 # puts students[3].average
 # puts students[3].letter_grade
 
-# puts linear_search(students, "Alex") == 0
-# puts linear_search(students, "NOT A STUDENT") == -1
+# puts linear_search(students, "Alex")
+# puts linear_search(students, "NOT A STUDENT")
 
 
-# students.each do |x|
-# 	person = students.index(x)
-# 	puts students[person].first_name == "Alex"
-# end
 
-def linear_search(array, name)
-	@students = array
 
-	index = @students.index { |student| student.first_name == name }
-	return index
-	
-	# @students.each do |x|
-	# 	person = @students.index(x)
-	# 	# @students[person].first_name == name
-	# 	# puts @students.index(person)
-	# 	p "SUPPPPP",person
-	# 	if @students[person].first_name == name
-	# 		puts @students.index(x)
-	# 	end
-	# end
-end
 
-p linear_search(students, "Nobody")
+
 
